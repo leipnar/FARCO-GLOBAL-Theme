@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farco Global | Shipping & Logistics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Lexend', 'sans-serif'],
+              logo: ['Lexend', 'sans-serif'],
+            },
+            colors: {
+              'farco-blue': '#002B5B',
+              'farco-sky-blue': '#4198D7',
+              'farco-light-blue': '#E9F1FA',
+              'farco-charcoal': '#1C1C1C',
+              'farco-gray': '#F5F5F5',
+            },
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.8.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
+  }
+}
+</script>
+<style>
+  input[type="text"], input[type="email"], input[type="password"], input[type="tel"], select, textarea {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-md bg-white text-farco-charcoal transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-farco-sky-blue/80 focus:border-farco-sky-blue shadow-sm placeholder-gray-400;
+  }
+  select {
+    @apply appearance-none bg-no-repeat bg-right;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+  .group:focus-within .group-focus-within\:block {
+      display: block;
+  }
+</style>
+</head>
+  <body class="font-sans text-farco-charcoal bg-farco-gray">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
