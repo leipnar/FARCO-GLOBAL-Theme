@@ -2,7 +2,7 @@ import React from 'react';
 import type { Ship, Service, NewsArticle } from './types';
 
 // =================================================================================
-// ICONS
+// ICONS (Font Awesome - Free)
 // =================================================================================
 export const SearchIcon: React.FC<{ className?: string }> = ({ className }) => (
      <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -10,68 +10,64 @@ export const SearchIcon: React.FC<{ className?: string }> = ({ className }) => (
     </svg>
 );
 
-// Redesigned Service Icons
-const ShipIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6V5.25m0 0a1.5 1.5 0 10-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6.75v6.172c0 .53-.22 1.01-.584 1.348l-1.551 1.423a.75.75 0 01-1.06-1.06l1.55-1.423A.75.75 0 013 12.922V6.75zm12-2.25a.75.75 0 00-.75.75v3.75c0 .53.22 1.01.584 1.348l1.551 1.423a.75.75 0 001.06-1.06l-1.55-1.423A.75.75 0 0015.75 9V5.25a.75.75 0 00-.75-.75z" />
-    </svg>
+// --- Primary Service Icons ---
+const TruckIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 640 512" fill="currentColor"><path d="M48 0C21.5 0 0 21.5 0 48V368c0 26.5 21.5 48 48 48H64c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H48zM160 464a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm384 0a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z"/></svg>
 );
 const AnchorIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 15.75l-3.75-3.75M8.25 15.75l3.75-3.75M3 13.5h18M6.75 7.5h10.5a2.25 2.25 0 012.25 2.25v.75a2.25 2.25 0 01-2.25 2.25H6.75a2.25 2.25 0 01-2.25-2.25v-.75A2.25 2.25 0 016.75 7.5z" />
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 512 512" fill="currentColor"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 352a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm-32-104c0-29.9 20.9-55.3 49.3-62.2c2.4-25.5 24.3-45.8 49.9-45.8s47.5 20.3 49.9 45.8c28.4 6.9 49.3 32.3 49.3 62.2v16c0 17.7-14.3 32-32 32H184c-17.7 0-32-14.3-32-32v-16z"/></svg>
 );
-const HandshakeIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.35 3.836c.266-.17.561-.274.873-.326l.323-.053c.427-.07.863-.07 1.29.003l.359.063c.435.076.86.216 1.258.411l.398.198c.414.207.79.479 1.12.81l.33.33c.33.33.602.705.81 1.12l.197.397c.196.398.336.823.412 1.258l.063.359c.072.427.072.863.002 1.29l-.053.323c-.052.312-.156.607-.326.873l-.17.266c-.198.307-.442.578-.727.81l-.284.232c-.328.267-.68.49-1.048.663l-.367.174c-.42.198-.862.33-1.314.39l-.36.05c-.43.06-.867.06-1.3.003l-.358-.063a4.5 4.5 0 01-1.258-.411l-.398-.198c-.414-.207-.79-.479-1.12-.81l-.33-.33c-.33-.33-.602-.705-.81-1.12l-.197-.397a4.5 4.5 0 01-.412-1.258l-.063-.359c-.072-.427-.072-.863-.002-1.29l.053-.323c.052-.312.156-.607.326-.873l.17-.266c.198-.307.442-.578.727-.81l.284-.232c.328-.267.68-.49 1.048-.663l.367-.174c.42-.198.862-.33 1.314-.39l.36-.05zM12 6.75a2.25 2.25 0 110 4.5 2.25 2.25 0 010-4.5z" />
-    </svg>
+const UsersIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 640 512" fill="currentColor"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64c13.3 0 24 10.7 24 24v64c0 13.3-10.7 24-24 24s-24-10.7-24-24zM448 480a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-160a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg>
 );
-const CustomsIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z" />
-    </svg>
+const ShieldIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 512 512" fill="currentColor"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0z"/></svg>
 );
 const WarehouseIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h6M9 10.5h6M9 14.25h6" />
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 576 512" fill="currentColor"><path d="M572.7 223.3c-2.6-7.8-8.8-13.9-16.7-16.7L494.4 192H448V64c0-35.3-28.7-64-64-64H192c-35.3 0-64 28.7-64 64v128H81.6l-61.6 14.6c-7.8 2.6-13.9 8.8-16.7 16.7L0 272v160c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V272l-3.3-48.7zM256 256H160V128h96v128zm160 0H320V128h96v128z"/></svg>
 );
-const BulkShipmentsIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
-    </svg>
+const BoxesStackedIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 512 512" fill="currentColor"><path d="M48 24C21.5 24 0 45.5 0 72V320c0 26.5 21.5 48 48 48H224V256c0-17.7 14.3-32 32-32s32 14.3 32 32V368H464c26.5 0 48-21.5 48-48V72c0-26.5-21.5-48-48-48H48zM288 368V440c0 13.3-10.7 24-24 24s-24-10.7-24-24V368h48z"/></svg>
 );
-const ShipManagementIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.472-2.472a3.375 3.375 0 00-4.773-4.773L6.75 11.42m5.877 5.877l-5.877-5.877m0 0a3.375 3.375 0 00-4.773 4.773l2.472 2.472" />
-    </svg>
+const GearsIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 512 512" fill="currentColor"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-15.7 20.2-28.1 20.2h-86.2c-3.2-11.8-7.7-22.9-13.4-33.3l43.3-39.4c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 15.7-20.2 28.1-20.2h86.2c3.2 11.8 7.7 22.9 13.4 33.3l-43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-15.7 20.2-28.1 20.2h-86.2c-3.2-11.8-7.7-22.9-13.4-33.3l43.3-39.4c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 15.7-20.2 28.1-20.2h-86.2v-86.2H384c12.4 0 23.7-8.3 28.1-20.2c3.2-8.7 .5-18.4-6.4-24.6l-43.3-39.4c5.7-10.5 10.2-21.5 13.4-33.3h86.2c12.4 0 23.7 8.3 28.1 20.2zM320 256a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM192 128a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm192 64a64 64 0 1 0 0 128 64 64 0 1 0 0-128z"/></svg>
 );
-const GasOilIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15.25 8.25c0-2.485-2.099-4.5-4.688-4.5s-4.688 2.015-4.688 4.5c0 1.933.916 3.655 2.28 4.688l-2.28 2.28a.75.75 0 000 1.06l.883.884a.75.75 0 001.06 0l2.28-2.28a5.952 5.952 0 004.688-4.688z" />
-    </svg>
+const GasPumpIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 512 512" fill="currentColor"><path d="M104 56c0-26.5 21.5-48 48-48H360c26.5 0 48 21.5 48 48V200H104V56zm0 176H408v24c0 53-43 96-96 96h-8c-14.7 0-28.5-3.4-40.6-9.4c-11.8 5.9-25.1 8.9-38.9 9.3c-3.1 .1-6.2 0-9.2-.2c-13.9-.9-27.5-3.3-40.2-7.3C155.8 384.8 135 364.5 123.4 343L104 309.8V232zM48 448c-17.7 0-32-14.3-32-32s14.3-32 32-32H464c17.7 0 32 14.3 32 32s-14.3 32-32 32H48zM312 232v56c0 13.3-10.7 24-24 24s-24-10.7-24-24V232h48z"/></svg>
+);
+const ShipIcon: React.FC<{ className?: string }> = ({ className = "h-10 w-10 text-farco-sky-blue" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 512 512" fill="currentColor"><path d="M32 96l320 0V32c0-17.7-14.3-32-32-32H64C46.3 0 32 14.3 32 32V96zM32 128V320c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128H32zM320 96H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H352V96h-32zM480 320c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V320h128zM32 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H480c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V384c0-17.7 14.3-32 32-32z"/></svg>
 );
 
-export const GlobeIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-farco-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3" /></svg>;
-export const SupportIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-farco-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8.25 21h7.5a2.25 2.25 0 002.25-2.25V9.75a2.25 2.25 0 00-2.25-2.25h-7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25z" /></svg>;
-export const ExpertiseIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-farco-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path d="M12.378 1.602a.75.75 0 00-.756 0L3 7.036V12a9.002 9.002 0 006.16 8.526.75.75 0 00.38 0A9.002 9.002 0 0021 12V7.036l-8.622-5.434zM15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
-export const LeafIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-farco-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9.13 7.52c-1.13-1.13-2.61-1.8-4.2-1.92a9.7 9.7 0 00-3.61 2.12c-1.68 1.68-2.2 4.19-1.54 6.32l9.24-9.24z" /><path strokeLinecap="round" strokeLinejoin="round" d="M14.87 16.48c1.13 1.13 2.61 1.8 4.2 1.92a9.7 9.7 0 003.61-2.12c1.68-1.68 2.2-4.19 1.54-6.32l-9.24 9.24z" /></svg>;
+// --- Why Choose Us Icons ---
+export const GlobeIcon: React.FC<{ className?: string }> = ({ className = "h-12 w-12 text-farco-blue" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 512 512" fill="currentColor"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.1-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.1 20.4 3.3 41.8 3.3 64zM256 480c48.6 0 93.3-14 130.5-37.8c-2.1-1.3-4.2-2.7-6.3-4.2c-21-14.6-53.4-23-96.2-23s-75.2 8.4-96.2 23c-2.1 1.5-4.2 2.9-6.3 4.2C162.7 466 207.4 480 256 480zM512 256c0 137-111 248-248 248S8 393 8 256S119 8 256 8s248 111 248 248zM40 256c0 22.2 1.2 43.6 3.3 64h86.2c-2.1-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H43.3c-2.1 20.4-3.3 41.8-3.3 64zM256 32c-48.6 0-93.3 14-130.5 37.8c2.1 1.3 4.2 2.7 6.3 4.2c21 14.6 53.4 23 96.2 23s75.2-8.4 96.2-23c2.1-1.5 4.2-2.9 6.3-4.2C349.3 46 304.6 32 256 32zM468.7 192h-86.2c2.1 20.4 3.3 41.8 3.3 64s-1.2 43.6-3.3 64h86.2c2.1-20.4 3.3-41.8 3.3-64s-1.2-43.6-3.3-64z"/></svg>
+);
+export const HeadsetIcon: React.FC<{ className?: string }> = ({ className = "h-12 w-12 text-farco-blue" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 512 512" fill="currentColor"><path d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z"/></svg>
+);
+export const UserTieIcon: React.FC<{ className?: string }> = ({ className = "h-12 w-12 text-farco-blue" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 448 512" fill="currentColor"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+);
+export const LeafIcon: React.FC<{ className?: string }> = ({ className = "h-12 w-12 text-farco-blue" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 576 512" fill="currentColor"><path d="M576 64a64 64 0 0 0-64-64H64A64 64 0 0 0 0 64V352a64 64 0 0 0 64 64H240.2c4.5 29.1 29.2 50.3 58.5 51.9l-2.4 7.1c-1.1 3.3 .2 7.1 3.5 8.2s7.1-.2 8.2-3.5l8.1-24.3c2.5 1.5 5.2 2.7 8.1 3.5l-2.4 7.1c-1.1 3.3 .2 7.1 3.5 8.2s7.1-.2 8.2-3.5l8.1-24.3c2.5 1.5 5.2 2.7 8.1 3.5l-2.4 7.1c-1.1 3.3 .2 7.1 3.5 8.2s7.1-.2 8.2-3.5l8.1-24.3c2.5 1.5 5.2 2.7 8.1 3.5l-2.4 7.1c-1.1 3.3 .2 7.1 3.5 8.2s7.1-.2 8.2-3.5l8.1-24.3c29.3-1.6 54-22.8 58.5-51.9H512a64 64 0 0 0 64-64V64zM288 320a96 96 0 1 1 0-192 96 96 0 1 1 0 192z"/></svg>
+);
 
-// Service Detail Icons
-const OceanIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75c0 3.28-2.69 5.95-6 5.95s-6-2.67-6-5.95m12 0A5.95 5.95 0 005.25 6.75m12 0v9a5.95 5.95 0 01-12 0v-9" /></svg>;
-const AirIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" /></svg>;
-const TruckIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-9m17.25 9v-9m-17.25-6h15a1.125 1.125 0 001.125-1.125V6.375A1.125 1.125 0 0019.875 5.25h-15.75A1.125 1.125 0 002.25 6.375v2.25c0 .621.504 1.125 1.125 1.125z" /></svg>;
+// --- Service Detail Icons (FA Solid) ---
+const WaterIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 384 512" fill="currentColor"><path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 44.2 35.8 80 80 80c8.8 0 16-7.2 16-16s-7.2-16-16-16c-26.5 0-48-21.5-48-48z"/></svg>;
+const PlaneIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 512 512" fill="currentColor"><path d="M496 160c0-35.3-28.7-64-64-64H320V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H176c-17.7 0-32 14.3-32 32v32h-16c-35.3 0-64 28.7-64 64v32h16v32c0 17.7 14.3 32 32 32h80v64c0 17.7 14.3 32 32 32s32-14.3 32-32V384h128c35.3 0 64-28.7 64-64V256h16c17.7 0 32-14.3 32-32V192h-16V160z"/></svg>;
+const RoadIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 512 512" fill="currentColor"><path d="M464 64C490.5 64 512 85.49 512 112V400C512 426.5 490.5 448 464 448H48C21.49 448 0 426.5 0 400V112C0 85.49 21.49 64 48 64H464zM224 224V160H288V224H224zM224 352V288H288V352H224zM128 224V160H160V224H128zM128 352V288H160V352H128zM352 224V160H384V224H352zM352 352V288H384V352H352z"/></svg>;
 const CheckCircleIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-farco-sky-blue"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
-const ValueIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25-2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 3a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 3V9" /></svg>;
-const InventoryIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3m-3.75 2.25V7.5A2.25 2.25 0 0112 5.25v0A2.25 2.25 0 0114.25 7.5v5.25" /></svg>;
+const SackDollarIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 512 512" fill="currentColor"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM216 352c-26.5 0-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48zm80-144c0 26.5-21.5 48-48 48s-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48z"/></svg>;
+const BoxesPackingIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 512 512" fill="currentColor"><path d="M208 0c-26.5 0-48 21.5-48 48V96H48c-26.5 0-48 21.5-48 48V464c0 26.5 21.5 48 48 48H464c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48H352V48c0-26.5-21.5-48-48-48H208zM64 160H448V448H64V160zm160-32V64h64v64H224z"/></svg>;
 
-// About Page Icons
-export const IntegrityIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-farco-sky-blue"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 01-7.8-4.22m15.6 0A9 9 0 0012 3M3.2 7.78A9 9 0 0012 21m8.8-13.22a9 9 0 01-7.8 13.44" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18" /></svg>;
-export const ExcellenceIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-farco-sky-blue"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" /></svg>;
-export const PartnershipIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-farco-sky-blue"><path strokeLinecap="round" strokeLinejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
-export const InnovationIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-farco-blue"><path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.311a7.5 7.5 0 01-7.5 0c-1.42 0-2.65-.5-3.62-1.332m14.74 0c-.97.832-2.2 1.332-3.62 1.332M12 3v-1.5m0 1.5a6.01 6.01 0 00-1.5.189m1.5-.189a6.01 6.01 0 011.5.189m-3.75-7.478a12.06 12.06 0 014.5 0M4.125 4.125c-.97.832-1.332 2.2-1.332 3.62s.362 2.79.97 3.62m14.74 0c.608-.83.97-1.89.97-3.62s-.362-2.79-.97-3.62" /></svg>;
-export const DedicationIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-farco-blue"><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>;
-export const SuccessIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-farco-blue"><path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0l15.482 0m-15.482 0L12 5.25v2.25" /></svg>;
+// --- About Page Icons ---
+export const HandshakeIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-farco-sky-blue" viewBox="0 0 640 512" fill="currentColor"><path d="M480 288c0-5.5-2-10.7-5.5-14.5L340.5 159c-9.4-10.1-24.6-10.1-34 0L171.5 273.5c-3.5 3.8-5.5 9-5.5 14.5c0 13.3 10.7 24 24 24H224v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32V312h32c13.3 0 24-10.7 24-24zm0 0c0-5.5-2-10.7-5.5-14.5L340.5 159c-9.4-10.1-24.6-10.1-34 0L171.5 273.5c-3.5 3.8-5.5 9-5.5 14.5c0 13.3 10.7 24 24 24H224v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32V312h32c13.3 0 24-10.7 24-24zm-320-96c0 5.5 2 10.7 5.5 14.5L299.5 321c9.4 10.1 24.6 10.1 34 0l134-144.5c3.5-3.8 5.5-9 5.5-14.5c0-13.3-10.7-24-24-24H384V32c0-17.7-14.3-32-32-32h-96c-17.7 0-32 14.3-32 32v136H184c-13.3 0-24 10.7-24 24z"/></svg>;
+export const AwardIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-farco-sky-blue" viewBox="0 0 384 512" fill="currentColor"><path d="M336 0c-26.5 0-48 21.5-48 48V224H96V48c0-26.5-21.5-48-48-48S0 21.5 0 48V464c0 26.5 21.5 48 48 48H336c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM192 344a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg>;
+export const UsersGearIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-farco-sky-blue" viewBox="0 0 640 512" fill="currentColor"><path d="M128 32a128 128 0 1 1-256 0A128 128 0 1 1 128 32zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-15.7 20.2-28.1 20.2h-86.2c-3.2-11.8-7.7-22.9-13.4-33.3l43.3-39.4c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 15.7-20.2 28.1-20.2h86.2c3.2 11.8 7.7 22.9 13.4 33.3l-43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-15.7 20.2-28.1 20.2h-86.2c-3.2-11.8-7.7-22.9-13.4-33.3l43.3-39.4c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 15.7-20.2 28.1-20.2h-86.2v-86.2H512c12.4 0 23.7-8.3 28.1-20.2c3.2-8.7 .5-18.4-6.4-24.6l-43.3-39.4c5.7-10.5 10.2-21.5 13.4-33.3h86.2c12.4 0 23.7 8.3 28.1 20.2zM576 256a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>;
+export const LightbulbIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-farco-sky-blue" viewBox="0 0 320 512" fill="currentColor"><path d="M160 0C71.6 0 0 71.6 0 160c0 48.4 21.3 92.1 55.1 121.2c-2.4 6.3-4.1 13-4.8 19.8C30.8 307.3 0 338.5 0 376c0 41.2 31.1 75.7 71.5 79.8c11.3 1.2 22.8 1.8 34.5 1.8c42.8 0 82.2-14.8 112-40c2.8-2.3 5.4-4.8 7.9-7.3c25.2-25.2 40.1-59.5 40.1-96.5c0-41.2-31.1-75.7-71.5-79.8c-11.3-1.2-22.8-1.8-34.5-1.8c-42.8 0-82.2 14.8-112 40c-2.8 2.3-5.4 4.8-7.9 7.3C60.8 385.2 48 368.5 48 352c0-26.4 21.6-48 48-48h128c26.4 0 48 21.6 48 48s-21.6 48-48 48h-16c-8.8 0-16 7.2-16 16s7.2 16 16 16h16c44.2 0 80-35.8 80-80c0-48.4-21.3-92.1-55.1-121.2c2.4-6.3 4.1-13 4.8-19.8C289.2 204.7 320 173.5 320 136c0-41.2-31.1-75.7-71.5-79.8C237.2 55 225.7 54.4 214 54.4c-42.8 0-82.2 14.8-112 40c-2.8 2.3-5.4 4.8-7.9 7.3C70.8 126.8 56 142.5 56 160c0 26.4 21.6 48 48 48h16c8.8 0 16-7.2 16-16s-7.2-16-16-16H104c-44.2 0-80-35.8-80-80C24 35.8 59.8 0 104 0h112z"/></svg>;
+export const BullseyeIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-farco-sky-blue" viewBox="0 0 512 512" fill="currentColor"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM256 400a144 144 0 1 1 0-288 144 144 0 1 1 0 288zM192 256a64 64 0 1 0 128 0 64 64 0 1 0 -128 0z"/></svg>;
+export const TrophyIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-farco-sky-blue" viewBox="0 0 576 512" fill="currentColor"><path d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM216 296c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm88-104c0 13.3-10.7 24-24 24s-24-10.7-24-24 10.7-24 24-24 24 10.7 24 24zm64 104c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24z"/></svg>;
 
 // =================================================================================
 // SERVICES
@@ -82,16 +78,16 @@ export const SERVICES: Service[] = [
     id: '1',
     slug: 'freight-forwarding',
     title: 'Freight Forwarding',
-    icon: <ShipIcon />,
+    icon: <TruckIcon />,
     shortDescription: 'Reliable and efficient international sea, air, and land freight solutions.',
     pageContent: {
       heroImageSeed: 'freight-container-port',
       introduction: 'Our comprehensive freight forwarding services form the backbone of global supply chains. We meticulously manage the logistics of shipping goods from origin to destination, ensuring your cargo travels safely, on schedule, and within budget via the most efficient routes.',
       features: [
-        { title: 'Ocean Freight', description: 'Full Container Load (FCL) and Less than Container Load (LCL) options to all major global ports.', icon: <OceanIcon /> },
-        { title: 'Air Freight', description: 'Expedited and standard air cargo services for your most time-sensitive shipments.', icon: <AirIcon /> },
-        { title: 'Land Transport', description: 'Integrated trucking and rail solutions providing seamless door-to-door connectivity.', icon: <TruckIcon /> },
-        { title: 'Customs Expertise', description: 'Expert handling of all customs documentation and procedures to prevent costly delays.', icon: <CustomsIcon /> }
+        { title: 'Ocean Freight', description: 'Full Container Load (FCL) and Less than Container Load (LCL) options to all major global ports.', icon: <WaterIcon /> },
+        { title: 'Air Freight', description: 'Expedited and standard air cargo services for your most time-sensitive shipments.', icon: <PlaneIcon /> },
+        { title: 'Land Transport', description: 'Integrated trucking and rail solutions providing seamless door-to-door connectivity.', icon: <RoadIcon /> },
+        { title: 'Customs Expertise', description: 'Expert handling of all customs documentation and procedures to prevent costly delays.', icon: <ShieldIcon className="w-8 h-8"/> }
       ],
       process: [
         { step: 1, title: 'Consultation & Planning', description: 'We analyze your needs to devise the optimal shipping strategy, balancing cost, speed, and security.' },
@@ -117,10 +113,10 @@ export const SERVICES: Service[] = [
       heroImageSeed: 'heavy-lift-cargo-ship',
       introduction: 'For cargo that falls outside standard shipping dimensions or requires dedicated capacity, our vessel chartering services provide the ultimate flexibility. We source the perfect vessel for your unique requirements, managing every detail of the voyage for a bespoke transport solution.',
       features: [
-        { title: 'Voyage & Time Charters', description: 'Flexible options tailored to your specific timeframe, cargo volume, and routing needs.', icon: <AnchorIcon /> },
-        { title: 'Project Cargo', description: 'Specialized management for heavy-lift, oversized, and high-value industrial equipment.', icon: <ValueIcon /> },
-        { title: 'Bulk Commodities', description: 'Efficient and reliable transport of grains, minerals, coal, and other raw materials.', icon: <InventoryIcon /> },
-        { title: 'Route Optimization', description: 'Advanced voyage planning to ensure the most efficient, safe, and cost-effective journey.', icon: <GlobeIcon /> }
+        { title: 'Voyage & Time Charters', description: 'Flexible options tailored to your specific timeframe, cargo volume, and routing needs.', icon: <AnchorIcon className="w-8 h-8" /> },
+        { title: 'Project Cargo', description: 'Specialized management for heavy-lift, oversized, and high-value industrial equipment.', icon: <SackDollarIcon /> },
+        { title: 'Bulk Commodities', description: 'Efficient and reliable transport of grains, minerals, coal, and other raw materials.', icon: <BoxesPackingIcon /> },
+        { title: 'Route Optimization', description: 'Advanced voyage planning to ensure the most efficient, safe, and cost-effective journey.', icon: <GlobeIcon className="w-8 h-8"/> }
       ],
       benefits: [
         { title: 'Unmatched Flexibility for Any Cargo', icon: <CheckCircleIcon /> },
@@ -134,16 +130,16 @@ export const SERVICES: Service[] = [
     id: '3',
     slug: 'ship-brokerage',
     title: 'Ship Brokerage',
-    icon: <HandshakeIcon />,
+    icon: <UsersIcon />,
     shortDescription: 'Expert brokerage for the buying, selling, and chartering of commercial vessels.',
     pageContent: {
       heroImageSeed: 'maritime-business-deal',
       introduction: 'Leveraging deep market intelligence and a vast global network, our ship brokerage team acts as a vital intermediary in the maritime marketplace. We facilitate the sale, purchase, and chartering of all commercial vessel types with professionalism, discretion, and an unwavering focus on our clients\' best interests.',
       features: [
-        { title: 'Sale & Purchase (S&P)', description: 'Connecting qualified buyers and sellers for all vessel types, from tankers to bulk carriers.', icon: <HandshakeIcon /> },
-        { title: 'Newbuilding Contracts', description: 'Negotiating and supervising new vessel constructions at world-class shipyards.', icon: <ShipIcon /> },
-        { title: 'Vessel Valuation', description: 'Providing accurate, data-driven market valuations for investment and financing purposes.', icon: <ValueIcon /> },
-        { title: 'Demolition Sales', description: 'Managing the end-of-life sale of vessels for responsible and compliant recycling.', icon: <AnchorIcon /> }
+        { title: 'Sale & Purchase (S&P)', description: 'Connecting qualified buyers and sellers for all vessel types, from tankers to bulk carriers.', icon: <UsersIcon className="w-8 h-8" /> },
+        { title: 'Newbuilding Contracts', description: 'Negotiating and supervising new vessel constructions at world-class shipyards.', icon: <ShipIcon className="w-8 h-8" /> },
+        { title: 'Vessel Valuation', description: 'Providing accurate, data-driven market valuations for investment and financing purposes.', icon: <SackDollarIcon /> },
+        { title: 'Demolition Sales', description: 'Managing the end-of-life sale of vessels for responsible and compliant recycling.', icon: <AnchorIcon className="w-8 h-8" /> }
       ],
       benefits: [
         { title: 'In-Depth Market Intelligence', icon: <CheckCircleIcon /> },
@@ -157,16 +153,16 @@ export const SERVICES: Service[] = [
     id: '8',
     slug: 'gas-oil-logistics',
     title: 'Gas & Oil Logistics',
-    icon: <GasOilIcon />,
+    icon: <GasPumpIcon />,
     shortDescription: 'Specialized, compliant logistics for the entire energy supply chain.',
     pageContent: {
       heroImageSeed: 'offshore-oil-rig-sunset',
       introduction: 'The energy sector demands precision, safety, and unwavering compliance. Our specialized Gas & Oil logistics services cater to the entire lifecycle, from upstream exploration and production support to downstream distribution of refined products. We provide robust, secure, and efficient supply chain solutions for one of the world\'s most critical industries.',
       features: [
-        { title: 'Upstream Logistics', description: 'Support for exploration and production, including rig mobilization, pipeline transport, and supply base management.', icon: <AnchorIcon /> },
-        { title: 'Downstream Distribution', description: 'Safe and reliable transportation of refined products via tankers, pipelines, and multimodal solutions.', icon: <TruckIcon /> },
-        { title: 'Offshore Support', description: 'Comprehensive logistics for offshore platforms and vessels, including crew changes and critical equipment delivery.', icon: <ShipIcon /> },
-        { title: 'Compliance & Safety', description: 'Strict adherence to HSSE standards and international regulations governing the transport of hazardous materials.', icon: <ExpertiseIcon /> }
+        { title: 'Upstream Logistics', description: 'Support for exploration and production, including rig mobilization, pipeline transport, and supply base management.', icon: <AnchorIcon className="w-8 h-8" /> },
+        { title: 'Downstream Distribution', description: 'Safe and reliable transportation of refined products via tankers, pipelines, and multimodal solutions.', icon: <RoadIcon /> },
+        { title: 'Offshore Support', description: 'Comprehensive logistics for offshore platforms and vessels, including crew changes and critical equipment delivery.', icon: <WaterIcon /> },
+        { title: 'Compliance & Safety', description: 'Strict adherence to HSSE standards and international regulations governing the transport of hazardous materials.', icon: <UserTieIcon className="w-8 h-8" /> }
       ],
       benefits: [
         { title: 'Uncompromising Safety & Compliance', icon: <CheckCircleIcon /> },
@@ -180,16 +176,16 @@ export const SERVICES: Service[] = [
     id: '4',
     slug: 'customs-brokerage',
     title: 'Customs Brokerage',
-    icon: <CustomsIcon />,
+    icon: <ShieldIcon />,
     shortDescription: 'Streamlining customs clearance to avoid delays and ensure compliance.',
     pageContent: {
       heroImageSeed: 'customs-inspection-port',
       introduction: 'Navigating the labyrinth of international trade regulations is a critical component of logistics. Our licensed customs brokers are experts in compliance, ensuring your shipments cross borders smoothly, avoid costly penalties, and adhere to all import and export laws in every jurisdiction.',
       features: [
-        { title: 'Import/Export Documentation', description: 'Meticulous preparation and submission of all declarations and required paperwork.', icon: <CustomsIcon /> },
-        { title: 'Tariff Classification', description: 'Accurate classification of goods to ensure the correct duties and taxes are assessed.', icon: <ValueIcon /> },
-        { title: 'Regulatory Compliance', description: 'Staying ahead of changing trade policies and government regulations to protect your business.', icon: <ExpertiseIcon /> },
-        { title: 'Duty Drawback & Recovery', description: 'Identifying and securing opportunities for duty refunds and other cost savings.', icon: <TruckIcon /> }
+        { title: 'Import/Export Documentation', description: 'Meticulous preparation and submission of all declarations and required paperwork.', icon: <ShieldIcon className="w-8 h-8" /> },
+        { title: 'Tariff Classification', description: 'Accurate classification of goods to ensure the correct duties and taxes are assessed.', icon: <SackDollarIcon /> },
+        { title: 'Regulatory Compliance', description: 'Staying ahead of changing trade policies and government regulations to protect your business.', icon: <UserTieIcon className="w-8 h-8" /> },
+        { title: 'Duty Drawback & Recovery', description: 'Identifying and securing opportunities for duty refunds and other cost savings.', icon: <RoadIcon /> }
       ],
       benefits: [
         { title: 'Accelerated Clearance Times', icon: <CheckCircleIcon /> },
@@ -209,10 +205,10 @@ export const SERVICES: Service[] = [
       heroImageSeed: 'modern-logistics-warehouse',
       introduction: 'Our global network of warehousing facilities offers more than just storage; they are strategic hubs designed to optimize your supply chain. We provide secure, flexible storage solutions and a full suite of distribution services to ensure your products are perfectly positioned and ready for market.',
       features: [
-        { title: 'Secure Storage', description: 'State-of-the-art facilities with 24/7 security, advanced surveillance, and climate control options.', icon: <WarehouseIcon /> },
-        { title: 'Inventory Management', description: 'Advanced Warehouse Management Systems (WMS) for real-time visibility and control.', icon: <InventoryIcon /> },
-        { title: 'Value-Added Services', description: 'Offering pick-and-pack, kitting, labeling, and other order fulfillment services.', icon: <ValueIcon /> },
-        { title: 'Last-Mile Delivery', description: 'A fully integrated distribution network for timely and reliable delivery to the end customer.', icon: <TruckIcon /> }
+        { title: 'Secure Storage', description: 'State-of-the-art facilities with 24/7 security, advanced surveillance, and climate control options.', icon: <WarehouseIcon className="w-8 h-8" /> },
+        { title: 'Inventory Management', description: 'Advanced Warehouse Management Systems (WMS) for real-time visibility and control.', icon: <BoxesPackingIcon /> },
+        { title: 'Value-Added Services', description: 'Offering pick-and-pack, kitting, labeling, and other order fulfillment services.', icon: <SackDollarIcon /> },
+        { title: 'Last-Mile Delivery', description: 'A fully integrated distribution network for timely and reliable delivery to the end customer.', icon: <RoadIcon /> }
       ],
       benefits: [
         { title: 'Reduced Storage & Overhead Costs', icon: <CheckCircleIcon /> },
@@ -226,16 +222,16 @@ export const SERVICES: Service[] = [
     id: '6',
     slug: 'bulk-shipments',
     title: 'Bulk Shipments',
-    icon: <BulkShipmentsIcon />,
+    icon: <BoxesStackedIcon />,
     shortDescription: 'Specialized handling and transport for bulk and break-bulk cargo.',
     pageContent: {
       heroImageSeed: 'bulk-carrier-loading-grain',
       introduction: 'We are experts in the global transportation of bulk commodities. Whether you are moving grains, minerals, or other raw materials, our dedicated bulk shipment services provide the scale, efficiency, and reliability required for this specialized cargo, ensuring safe and timely delivery worldwide.',
       features: [
-        { title: 'Dry Bulk Cargo', description: 'Comprehensive solutions for materials like coal, iron ore, grain, and fertilizers.', icon: <InventoryIcon /> },
-        { title: 'Break-Bulk Cargo', description: 'Expert handling for oversized or non-containerized goods like machinery, steel, and timber.', icon: <ValueIcon /> },
-        { title: 'Port & Stowage Planning', description: 'Meticulous planning for optimal vessel loading, stability, and discharge operations.', icon: <AnchorIcon /> },
-        { title: 'Global Sourcing', description: 'Leveraging our global network to find the right vessel and route for your specific bulk needs.', icon: <GlobeIcon /> }
+        { title: 'Dry Bulk Cargo', description: 'Comprehensive solutions for materials like coal, iron ore, grain, and fertilizers.', icon: <BoxesPackingIcon /> },
+        { title: 'Break-Bulk Cargo', description: 'Expert handling for oversized or non-containerized goods like machinery, steel, and timber.', icon: <SackDollarIcon /> },
+        { title: 'Port & Stowage Planning', description: 'Meticulous planning for optimal vessel loading, stability, and discharge operations.', icon: <AnchorIcon className="w-8 h-8" /> },
+        { title: 'Global Sourcing', description: 'Leveraging our global network to find the right vessel and route for your specific bulk needs.', icon: <GlobeIcon className="w-8 h-8"/> }
       ],
       benefits: [
         { title: 'Economies of Scale for Large Volumes', icon: <CheckCircleIcon /> },
@@ -249,16 +245,16 @@ export const SERVICES: Service[] = [
     id: '7',
     slug: 'ship-management',
     title: 'Ship Management',
-    icon: <ShipManagementIcon />,
+    icon: <GearsIcon />,
     shortDescription: 'Comprehensive technical and commercial management for vessel owners.',
     pageContent: {
       heroImageSeed: 'ship-bridge-navigation',
       introduction: 'For ship owners and investors, we offer a complete suite of ship management services designed to maximize operational efficiency and return on investment. From technical oversight to crew management and commercial operations, we act as your trusted partner, ensuring your assets are maintained and operated to the highest international standards.',
       features: [
-        { title: 'Technical Management', description: 'Full oversight of vessel maintenance, repairs, dry-docking, and regulatory compliance.', icon: <ShipManagementIcon /> },
-        { title: 'Crew Management', description: 'Recruitment, training, and administration for highly qualified and experienced seafarers.', icon: <ShipIcon /> },
-        { title: 'Commercial Management', description: 'Chartering, operations, and financial management to maximize vessel profitability.', icon: <HandshakeIcon /> },
-        { title: 'Safety & Quality Assurance', description: 'Implementation of rigorous ISM, ISPS, and MLC compliance protocols for safe and secure operations.', icon: <ExpertiseIcon /> }
+        { title: 'Technical Management', description: 'Full oversight of vessel maintenance, repairs, dry-docking, and regulatory compliance.', icon: <GearsIcon className="w-8 h-8" /> },
+        { title: 'Crew Management', description: 'Recruitment, training, and administration for highly qualified and experienced seafarers.', icon: <ShipIcon className="w-8 h-8" /> },
+        { title: 'Commercial Management', description: 'Chartering, operations, and financial management to maximize vessel profitability.', icon: <UsersIcon className="w-8 h-8" /> },
+        { title: 'Safety & Quality Assurance', description: 'Implementation of rigorous ISM, ISPS, and MLC compliance protocols for safe and secure operations.', icon: <UserTieIcon className="w-8 h-8" /> }
       ],
       benefits: [
         { title: 'Optimized Vessel Performance & Uptime', icon: <CheckCircleIcon /> },
@@ -501,12 +497,12 @@ export const WHY_CHOOSE_US_ITEMS = [
         description: "Our extensive network of partners and offices in key global markets ensures seamless and reliable service worldwide."
     },
     {
-        icon: <SupportIcon />,
+        icon: <HeadsetIcon />,
         title: "24/7 Dedicated Support",
         description: "Your dedicated account manager and our operations team are available around the clock to support your business needs."
     },
     {
-        icon: <ExpertiseIcon />,
+        icon: <UserTieIcon />,
         title: "Decades of Expertise",
         description: "With over 35 years in the industry, we have the deep knowledge required to navigate the complexities of global trade."
     },
@@ -556,18 +552,18 @@ export const TEAM_MEMBERS = [
 ];
 
 // =================================================================================
-// CLIENT LOGOS
+// CLIENT LOGOS (REDESIGNED)
 // =================================================================================
-const ClientLogo: React.FC<{ path: string }> = ({ path }) => (
-    <svg className="h-8 w-auto text-gray-400 group-hover:text-gray-600 transition-colors duration-300" role="img" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d={path} />
-    </svg>
+const ClientLogo: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+    <div className="h-8 w-auto text-gray-400 group-hover:text-gray-600 transition-colors duration-300">
+        {children}
+    </div>
 );
 
 export const CLIENT_LOGOS = [
-    { name: "Apex Shipping Lines", component: <ClientLogo path="M0 20 L20 0 L40 20 L20 40 Z M50 0 L120 0 L120 10 L60 10 Z M60 15 L120 15 L120 25 L50 25 Z M50 30 L120 30 L120 40 L60 40 Z" /> },
-    { name: "Terra Bulk Carriers", component: <ClientLogo path="M0 40 L30 0 L60 40 Z M70 40 L120 40 L95 0 Z" /> },
-    { name: "Nexus Brokers", component: <ClientLogo path="M0 0 L40 40 L80 0 L120 40 M20 20 L60 20 M60 20 L100 20" /> },
-    { name: "Odyssey Shipowners", component: <ClientLogo path="M60 20 A 50 15 0 1 0 60 21 Z M10 20 A 10 5 0 1 0 11 20 Z" /> },
-    { name: "Meridian Energy", component: <ClientLogo path="M0 10 L60 10 L60 0 L120 20 L60 40 L60 30 L0 30Z" /> },
+    { name: "Apex Shipping Lines", component: <ClientLogo><svg role="img" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M60 0L0 40h25L60 13.3L95 40h25L60 0z"/></svg></ClientLogo> },
+    { name: "Terra Bulk Carriers", component: <ClientLogo><svg role="img" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95 8.95 0 20 0h80c11.05 0 20 8.95 20 20s-8.95 20-20 20H20C8.95 40 0 31.05 0 20zm30 0h60v10H30v-10zm0-10h60v10H30V10z"/></svg></ClientLogo> },
+    { name: "Nexus Brokers", component: <ClientLogo><svg role="img" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 20L20 0l20 20-20 20zM80 20l20-20 20 20-20 20zM30 20h60"/></svg></ClientLogo> },
+    { name: "Odyssey Shipowners", component: <ClientLogo><svg role="img" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M20 40a20 20 0 100-40 20 20 0 000 40zm0-10a10 10 0 100-20 10 10 0 000 20zM50 0h10v40H50zM70 0h40v10H70zM70 30h40v10H70z"/></svg></ClientLogo> },
+    { name: "Meridian Energy", component: <ClientLogo><svg role="img" viewBox="0 0 120 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20 20L0 0v40zM100 20l20-20v40zM60 20c0-11.05-8.95-20-20-20s-20 8.95-20 20 8.95 20 20 20 20-8.95 20-20zm0 0c0-11.05 8.95-20 20-20s20 8.95 20 20-8.95 20-20 20-20-8.95-20-20z"/></svg></ClientLogo> },
 ];

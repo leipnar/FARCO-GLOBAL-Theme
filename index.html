@@ -23,6 +23,15 @@
               'farco-charcoal': '#1C1C1C',
               'farco-gray': '#F5F5F5',
             },
+            keyframes: {
+              'fade-in': {
+                  '0%': { opacity: '0', transform: 'translateY(10px)' },
+                  '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            },
+            animation: {
+                'fade-in': 'fade-in 0.5s ease-out forwards',
+            }
           }
         }
       }
@@ -38,18 +47,76 @@
 }
 </script>
 <style>
-  input[type="text"], input[type="email"], input[type="password"], input[type="tel"], select, textarea {
-    @apply w-full px-4 py-3 border border-gray-300 rounded-md bg-white text-farco-charcoal transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-farco-sky-blue/80 focus:border-farco-sky-blue shadow-sm placeholder-gray-400;
-  }
-  select {
-    @apply appearance-none bg-no-repeat bg-right;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-    background-position: right 0.75rem center;
-    background-size: 1.5em 1.5em;
-    padding-right: 2.5rem;
-  }
   .group:focus-within .group-focus-within\:block {
       display: block;
+  }
+  
+  /* Modern Floating Label Form Styles */
+  .form-field {
+      position: relative;
+  }
+  .form-input, .form-textarea, .form-select {
+      display: block;
+      width: 100%;
+      padding: 1.25rem 1rem 0.75rem; /* top, h, bottom to make room for label */
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #1C1C1C;
+      background-color: #fff;
+      border: 1px solid #d1d5db;
+      border-radius: 0.375rem;
+      appearance: none;
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+  .form-input:focus, .form-textarea:focus, .form-select:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      border-color: #4198D7;
+      box-shadow: 0 0 0 3px rgba(65, 152, 215, 0.3);
+  }
+  .form-label {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 1rem;
+      color: #6b7280;
+      pointer-events: none;
+      transition: all 0.2s ease-out;
+      transform-origin: top left;
+  }
+
+  /* Floated state for text inputs and textareas */
+  .form-input:focus ~ .form-label,
+  .form-input:not(:placeholder-shown) ~ .form-label,
+  .form-textarea:focus ~ .form-label,
+  .form-textarea:not(:placeholder-shown) ~ .form-label {
+      transform: translateY(-0.625rem) scale(0.75);
+      color: #002B5B;
+  }
+  
+  /* Always-floated state for selects */
+  .form-select ~ .form-label {
+      transform: translateY(-0.625rem) scale(0.75);
+      color: #6b7280; /* Start with gray for consistency before interaction */
+  }
+
+  .form-select:focus ~ .form-label {
+      color: #002B5B;
+  }
+
+  /* Special case for the search input which has pl-10 */
+  .form-input.pl-10 ~ .form-label {
+      left: 2.5rem; /* 10 * 0.25rem */
+  }
+  
+  /* Specific styling for select to add the arrow back */
+  .form-select {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+      background-position: right 0.75rem center;
+      background-repeat: no-repeat;
+      background-size: 1.5em 1.5em;
+      padding-right: 2.5rem;
   }
 </style>
 </head>

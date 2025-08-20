@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TEAM_MEMBERS, MILESTONES, IntegrityIcon, ExcellenceIcon, PartnershipIcon, InnovationIcon, DedicationIcon, SuccessIcon } from '../constants';
+import { TEAM_MEMBERS, MILESTONES, HandshakeIcon, AwardIcon, UsersGearIcon, LightbulbIcon, BullseyeIcon, TrophyIcon } from '../constants';
 
 const AboutPage: React.FC = () => {
   return (
@@ -25,17 +25,17 @@ const AboutPage: React.FC = () => {
             </div>
             <div className="mt-20 grid md:grid-cols-3 gap-8">
                 <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div className="inline-block bg-farco-light-blue p-4 rounded-full mb-4"><InnovationIcon /></div>
+                    <div className="inline-block bg-farco-light-blue p-4 rounded-full mb-4"><LightbulbIcon /></div>
                     <h3 className="text-2xl font-bold text-farco-blue mb-2">Innovation</h3>
                     <p className="text-gray-600">We leverage technology and creative solutions to drive efficiency and visibility in every shipment.</p>
                 </div>
                  <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div className="inline-block bg-farco-light-blue p-4 rounded-full mb-4"><DedicationIcon /></div>
+                    <div className="inline-block bg-farco-light-blue p-4 rounded-full mb-4"><BullseyeIcon /></div>
                     <h3 className="text-2xl font-bold text-farco-blue mb-2">Dedication</h3>
                     <p className="text-gray-600">Our team is committed to proactive communication and round-the-clock support for our clients.</p>
                 </div>
                  <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div className="inline-block bg-farco-light-blue p-4 rounded-full mb-4"><SuccessIcon /></div>
+                    <div className="inline-block bg-farco-light-blue p-4 rounded-full mb-4"><TrophyIcon /></div>
                     <h3 className="text-2xl font-bold text-farco-blue mb-2">Client Success</h3>
                     <p className="text-gray-600">Your goals are our goals. We measure our success by the success of your supply chain.</p>
                 </div>
@@ -78,17 +78,17 @@ const AboutPage: React.FC = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
                 <div className="text-center">
-                    <div className="flex justify-center mb-4"><IntegrityIcon /></div>
+                    <div className="flex justify-center mb-4"><HandshakeIcon /></div>
                     <h3 className="text-2xl font-bold text-white mb-2">Integrity</h3>
                     <p className="text-gray-400">We conduct our business with honesty and transparency, building trust through every interaction.</p>
                 </div>
                  <div className="text-center">
-                    <div className="flex justify-center mb-4"><ExcellenceIcon /></div>
+                    <div className="flex justify-center mb-4"><AwardIcon /></div>
                     <h3 className="text-2xl font-bold text-white mb-2">Excellence</h3>
                     <p className="text-gray-400">We are relentless in our pursuit of quality, striving for superior performance in all our services.</p>
                 </div>
                  <div className="text-center">
-                    <div className="flex justify-center mb-4"><PartnershipIcon /></div>
+                    <div className="flex justify-center mb-4"><UsersGearIcon /></div>
                     <h3 className="text-2xl font-bold text-white mb-2">Partnership</h3>
                     <p className="text-gray-400">We collaborate closely with our clients, viewing ourselves as an extension of their team.</p>
                 </div>

@@ -18,14 +18,14 @@ const AuthPage: React.FC = () => {
     );
 
     const LoginForm = () => (
-         <form className="space-y-5">
-            <div>
-                <label htmlFor="email-login" className="sr-only">Email Address</label>
-                <input id="email-login" name="email" type="email" autoComplete="email" required placeholder="Email Address" />
+         <form className="space-y-6">
+            <div className="form-field">
+                <input id="email-login" name="email" type="email" autoComplete="email" required placeholder=" " className="form-input" />
+                <label htmlFor="email-login" className="form-label">Email Address</label>
             </div>
-            <div>
-                 <label htmlFor="password-login" className="sr-only">Password</label>
-                 <input id="password-login" name="password" type="password" autoComplete="current-password" required placeholder="Password" />
+            <div className="form-field">
+                 <input id="password-login" name="password" type="password" autoComplete="current-password" required placeholder=" " className="form-input" />
+                 <label htmlFor="password-login" className="form-label">Password</label>
             </div>
              <div className="flex items-center justify-between">
                 <div className="text-sm">
@@ -41,18 +41,18 @@ const AuthPage: React.FC = () => {
     );
 
      const RegisterForm = () => (
-        <form className="space-y-5">
-            <div>
-                <label htmlFor="name-register" className="sr-only">Full Name</label>
-                <input id="name-register" name="name" type="text" required placeholder="Full Name" />
+        <form className="space-y-6">
+            <div className="form-field">
+                <input id="name-register" name="name" type="text" required placeholder=" " className="form-input" />
+                <label htmlFor="name-register" className="form-label">Full Name</label>
             </div>
-            <div>
-                <label htmlFor="email-register" className="sr-only">Email Address</label>
-                <input id="email-register" name="email" type="email" required placeholder="Email Address" />
+            <div className="form-field">
+                <input id="email-register" name="email" type="email" required placeholder=" " className="form-input" />
+                <label htmlFor="email-register" className="form-label">Email Address</label>
             </div>
-            <div>
-                 <label htmlFor="password-register" className="sr-only">Password</label>
-                 <input id="password-register" name="password" type="password" required placeholder="Create a Password" />
+            <div className="form-field">
+                 <input id="password-register" name="password" type="password" required placeholder=" " className="form-input" />
+                 <label htmlFor="password-register" className="form-label">Create a Password</label>
             </div>
             <div>
                  <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-bold text-white bg-farco-blue hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-farco-blue transition-all duration-300 transform hover:scale-105">

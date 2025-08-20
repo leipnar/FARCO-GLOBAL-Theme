@@ -73,13 +73,25 @@ const ContactPage: React.FC = () => {
                     <h3 className="text-3xl font-extrabold text-farco-blue tracking-tight">Send a Message</h3>
                     <p className="text-gray-600 mt-2 mb-8">Fill out the form below and we'll get back to you promptly.</p>
                 </div>
-                <form className="space-y-5">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <input type="text" placeholder="Your Name" required />
-                        <input type="email" placeholder="Your Email" required />
+                <form className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="form-field">
+                            <input type="text" id="contact-name" name="name" required className="form-input" placeholder=" " />
+                            <label htmlFor="contact-name" className="form-label">Your Name</label>
+                        </div>
+                        <div className="form-field">
+                            <input type="email" id="contact-email" name="email" required className="form-input" placeholder=" " />
+                            <label htmlFor="contact-email" className="form-label">Your Email</label>
+                        </div>
                     </div>
-                    <input type="text" placeholder="Subject" required />
-                    <textarea placeholder="How can we help you today?" rows={5} required></textarea>
+                    <div className="form-field">
+                        <input type="text" id="contact-subject" name="subject" required className="form-input" placeholder=" " />
+                        <label htmlFor="contact-subject" className="form-label">Subject</label>
+                    </div>
+                    <div className="form-field">
+                        <textarea id="contact-message" name="message" rows={5} required className="form-textarea" placeholder=" "></textarea>
+                        <label htmlFor="contact-message" className="form-label">How can we help you today?</label>
+                    </div>
                     <button type="submit" className="w-full bg-farco-sky-blue text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Submit Message
                     </button>

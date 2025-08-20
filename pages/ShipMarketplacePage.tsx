@@ -80,21 +80,31 @@ const ShipMarketplacePage: React.FC = () => {
                 {/* Filtering Bar */}
                 <div className="bg-white p-4 rounded-lg shadow-md mb-8 sticky top-24 z-40">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                        <div className="relative md:col-span-2">
-                             <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full !pl-10" placeholder="Search by vessel name..." />
-                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <div className="md:col-span-2 form-field">
+                            <input
+                                type="text"
+                                id="vessel-search"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="form-input pl-10"
+                                placeholder=" "
+                            />
+                            <label htmlFor="vessel-search" className="form-label">Search by vessel name...</label>
+                            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <SearchIcon className="h-5 w-5 text-gray-400" />
-                             </div>
+                            </div>
                         </div>
-                        <div>
-                            <select value={shipType} onChange={(e) => setShipType(e.target.value)}>
+                        <div className="form-field">
+                            <select id="ship-type-filter" value={shipType} onChange={(e) => setShipType(e.target.value)} className="form-select">
                                 {shipTypes.map(type => <option key={type} value={type}>{type}</option>)}
                             </select>
+                            <label htmlFor="ship-type-filter" className="form-label">Vessel Type</label>
                         </div>
-                        <div>
-                           <select value={status} onChange={(e) => setStatus(e.target.value)}>
+                        <div className="form-field">
+                           <select id="status-filter" value={status} onChange={(e) => setStatus(e.target.value)} className="form-select">
                                 {statuses.map(s => <option key={s} value={s}>{s}</option>)}
                             </select>
+                            <label htmlFor="status-filter" className="form-label">Status</label>
                         </div>
                     </div>
                 </div>

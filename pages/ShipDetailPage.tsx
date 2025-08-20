@@ -63,13 +63,25 @@ const ShipDetailPage: React.FC = () => {
                         {/* Inquiry Form */}
                         <div className="bg-white p-8 rounded-lg shadow-md">
                             <h3 className="text-2xl font-bold text-farco-blue mb-6">Inquire About This Vessel</h3>
-                            <form className="space-y-4">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <input type="text" placeholder="Your Name" required />
-                                    <input type="email" placeholder="Your Email" required />
+                            <form className="space-y-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="form-field">
+                                        <input type="text" id="inquiry-name" name="name" required className="form-input" placeholder=" " />
+                                        <label htmlFor="inquiry-name" className="form-label">Your Name</label>
+                                    </div>
+                                    <div className="form-field">
+                                        <input type="email" id="inquiry-email" name="email" required className="form-input" placeholder=" " />
+                                        <label htmlFor="inquiry-email" className="form-label">Your Email</label>
+                                    </div>
                                 </div>
-                                <input type="text" placeholder="Company Name" />
-                                <textarea placeholder="Your Message" rows={5}></textarea>
+                                <div className="form-field">
+                                    <input type="text" id="inquiry-company" name="company" className="form-input" placeholder=" " />
+                                    <label htmlFor="inquiry-company" className="form-label">Company Name</label>
+                                </div>
+                                <div className="form-field">
+                                    <textarea id="inquiry-message" name="message" rows={5} className="form-textarea" placeholder=" "></textarea>
+                                    <label htmlFor="inquiry-message" className="form-label">Your Message</label>
+                                </div>
                                 <button type="submit" className="w-full bg-farco-sky-blue text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 transition-colors text-lg">
                                     Send Inquiry
                                 </button>
